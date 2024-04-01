@@ -39,7 +39,7 @@ public class DataInitializer implements ApplicationRunner {
         var user = userRepository.findByEmail(email).get();
 
         var faker = new Faker();
-        IntStream.range(1, 10).forEach(i -> {
+        IntStream.range(1, 3).forEach(i -> {
             var post = new Post();
             post.setName(faker.book().title());
             var paragraphs = faker.lorem().paragraphs(5);
